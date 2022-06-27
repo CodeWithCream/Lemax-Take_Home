@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Take_Home", "Lemax-Take_Home\Take_Home.csproj", "{78BC39CA-2F00-44F8-A469-E7A59FCB0E47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Take_Home", "Lemax-Take_Home\Take_Home.csproj", "{78BC39CA-2F00-44F8-A469-E7A59FCB0E47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Take_Home.Model", "Take_Home.Model\Take_Home.Model.csproj", "{D7626FB5-73FF-4670-84C1-69A1047A975D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Take_Home.Model", "Take_Home.Model\Take_Home.Model.csproj", "{D7626FB5-73FF-4670-84C1-69A1047A975D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Take_Home.DAL.Interfaces", "Take_Home.DAL.Interfaces\Take_Home.DAL.Interfaces.csproj", "{6617FA6B-9205-4C5A-BAEE-2AD1CD85E1AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Take_Home.DAL.Interfaces", "Take_Home.DAL.Interfaces\Take_Home.DAL.Interfaces.csproj", "{6617FA6B-9205-4C5A-BAEE-2AD1CD85E1AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Take_Home.DAL.InMemory", "Take_Home.DAL.InMemory\Take_Home.DAL.InMemory.csproj", "{85BAA69F-6D84-486A-AA55-4C568256A319}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Take_Home.DAL.InMemory", "Take_Home.DAL.InMemory\Take_Home.DAL.InMemory.csproj", "{85BAA69F-6D84-486A-AA55-4C568256A319}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Take_Home.DAL.InMemory.Tests", "Take_Home.DAL.InMemory.Tests\Take_Home.DAL.InMemory.Tests.csproj", "{19211AF5-170C-4CB1-BD7E-78A9EE6B555C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Take_Home.DAL.InMemory.Tests", "Take_Home.DAL.InMemory.Tests\Take_Home.DAL.InMemory.Tests.csproj", "{19211AF5-170C-4CB1-BD7E-78A9EE6B555C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Take_Home.DTL", "Take_Home.DTL\Take_Home.DTL.csproj", "{2C0D9DD6-E03A-40EC-8211-A6EECC572488}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{19211AF5-170C-4CB1-BD7E-78A9EE6B555C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19211AF5-170C-4CB1-BD7E-78A9EE6B555C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19211AF5-170C-4CB1-BD7E-78A9EE6B555C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0D9DD6-E03A-40EC-8211-A6EECC572488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0D9DD6-E03A-40EC-8211-A6EECC572488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0D9DD6-E03A-40EC-8211-A6EECC572488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0D9DD6-E03A-40EC-8211-A6EECC572488}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

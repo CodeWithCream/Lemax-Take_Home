@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using Lemax_Take_Home.Authorization;
 using Lemax_Take_Home.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NetTopologySuite.Geometries;
 using Newsy_API.DAL.Exceptions;
@@ -46,9 +48,11 @@ namespace Lemax_Take_Home.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
         public async Task<ActionResult<CreateEditHotelDto>> PostHotel(CreateEditHotelDto createHotelDto)
         {

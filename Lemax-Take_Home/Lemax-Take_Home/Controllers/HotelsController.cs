@@ -26,9 +26,9 @@ namespace Lemax_Take_Home.Controllers
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(IEnumerable<HotelDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(HotelDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<IEnumerable<HotelDto>>> GetHotel(long id)
+        public async Task<ActionResult<HotelDto>> GetHotel(long id)
         {
             try
             {

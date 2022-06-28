@@ -27,6 +27,7 @@ namespace Take_Home.Services.Tests
         const float hotelPrice = 100f;
         const double longitude = 15;
         const double latitude = 45;
+
         readonly CreateEditHotelDto hotelToCreateDto = new()
         {
             Name = hotelName,

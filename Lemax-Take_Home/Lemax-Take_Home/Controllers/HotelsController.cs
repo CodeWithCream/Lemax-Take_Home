@@ -27,7 +27,7 @@ namespace Lemax_Take_Home.Controllers
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(IEnumerable<HotelDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<HotelDto>>> GetHotel(long id)
         {
@@ -50,11 +50,11 @@ namespace Lemax_Take_Home.Controllers
 
         [Authorize]
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(HotelDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
-        public async Task<ActionResult<CreateEditHotelDto>> PostHotel(CreateEditHotelDto createHotelDto)
+        public async Task<ActionResult<HotelDto>> PostHotel(CreateEditHotelDto createHotelDto)
         {
             _logger.LogInformation($"Creating new hotel: {JsonConvert.SerializeObject(createHotelDto)}.");
 
@@ -83,10 +83,13 @@ namespace Lemax_Take_Home.Controllers
             }
         }
 
+        [Authorize]
         [HttpPut("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(HotelDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> PutHotel(long id, CreateEditHotelDto editHotelDto)
+        public async Task<ActionResult<HotelDto>> PutHotel(long id, CreateEditHotelDto editHotelDto)
         {
             _logger.LogInformation($"Updating hotel: {JsonConvert.SerializeObject(editHotelDto)}");
 
@@ -94,19 +97,30 @@ namespace Lemax_Take_Home.Controllers
             {
                 await _repository.UpdateAsync(id, editHotelDto.Name, editHotelDto.Price, _mapper.Map<Point>(editHotelDto.Geolocation));
                 _logger.LogInformation($"Hotel is updated.");
-
-                return NoContent();
             }
             catch (NotFoundException)
             {
                 _logger.LogWarning($"Hotel with id={id} does not exist.");
                 return NotFound(id); //TODO create hotel
             }
+
+            try
+            {
+                var editedHotel = await _repository.GetByIdAsync(id);
+                return new OkObjectResult(_mapper.Map<HotelDto>(editedHotel));
+            }
+            catch (NotFoundException) //someone deleted it
+            {
+                _logger.LogWarning("Someone deleted updated hotel.");
+                return new StatusCodeResult(StatusCodes.Status409Conflict);
+            }
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Delete(long id)
         {
             _logger.LogInformation($"Deleting hotel with id={id}.");
@@ -120,7 +134,7 @@ namespace Lemax_Take_Home.Controllers
             }
             catch (NotFoundException)
             {
-                _logger.LogWarning($"Hotel with id={id} does not exist. Hotel is already deleted");
+                _logger.LogWarning($"Hotel with id={id} does not exist. Hotel is already deleted.");
                 return new StatusCodeResult(StatusCodes.Status200OK);
             }
         }

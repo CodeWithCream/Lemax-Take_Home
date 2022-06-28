@@ -8,7 +8,8 @@ using Take_Home.DAL.Interfaces;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+//configure swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -18,7 +19,7 @@ builder.Services.AddSwaggerGen(options =>
         Type = SecuritySchemeType.Http,
         Scheme = "basic",
         In = ParameterLocation.Header,
-        Description = "Basic Authorization header using the Bearer scheme."
+        Description = "Basic Authorization header using username and password."
     });
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
@@ -36,16 +37,19 @@ builder.Services.AddSwaggerGen(options =>
                 });
 });
 
-//configure repositories
-builder.Services.AddSingleton<IHotelRepository, HotelRepository>();
-
-builder.Services.AddSingleton<IApplicationUserService, SimpleUserService>();
-
+//configure authentication
 builder.Services.AddAuthentication("BasicAuthentication")
     .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
 
+//configure repositories
+builder.Services.AddSingleton<IHotelRepository, HotelRepository>();
+
+//configure services
+builder.Services.AddSingleton<IApplicationUserService, SimpleApplicationUserService>();
+
 //configure automapper
 builder.Services.AddAutoMapper(typeof(Program));
+
 
 var app = builder.Build();
 

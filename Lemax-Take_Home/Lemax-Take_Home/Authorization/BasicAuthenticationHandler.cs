@@ -7,6 +7,10 @@ using System.Text.Encodings.Web;
 
 namespace Lemax_Take_Home.Authorization
 {
+    /// <summary>
+    /// Authenticate user with username and password (plain text)
+    /// Used only for PoC.
+    /// </summary>
     public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {
         readonly IApplicationUserService _applicationUserService;
@@ -22,7 +26,7 @@ namespace Lemax_Take_Home.Authorization
             _applicationUserService = applicationUserService;
         }
 
-        protected override Task<AuthenticateResult> HandleAuthenticateAsync()
+        protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
         {
             string username;
             try
@@ -32,12 +36,12 @@ namespace Lemax_Take_Home.Authorization
                 username = credentials.FirstOrDefault();
                 var password = credentials.LastOrDefault();
 
-                if (!_applicationUserService.ValidateCredentials(username, password))
+                if (!await _applicationUserService.ValidateCredentialsAsync(username, password))
                     throw new ArgumentException("Invalid credentials");
             }
             catch (Exception ex)
             {
-                return Task.FromResult(AuthenticateResult.Fail($"Authentication failed: {ex.Message}"));
+                return AuthenticateResult.Fail($"Authentication failed: {ex.Message}");
             }
 
             var claims = new[] {
@@ -47,7 +51,7 @@ namespace Lemax_Take_Home.Authorization
             var principal = new ClaimsPrincipal(identity);
             var ticket = new AuthenticationTicket(principal, Scheme.Name);
 
-            return Task.FromResult(AuthenticateResult.Success(ticket));
+            return AuthenticateResult.Success(ticket);
         }
     }
 }

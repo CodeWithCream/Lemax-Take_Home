@@ -1,13 +1,12 @@
 ﻿using AutoMapper;
-using Lemax_Take_Home.Authorization;
 using Lemax_Take_Home.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NetTopologySuite.Geometries;
 using Newsy_API.DAL.Exceptions;
 using Newtonsoft.Json;
-using Take_Home.DAL.Interfaces;
 using Take_Home.Model;
+using Take_Home.Services.Interfaces;
 
 namespace Lemax_Take_Home.Controllers
 {
@@ -15,13 +14,13 @@ namespace Lemax_Take_Home.Controllers
     [ApiController]
     public class HotelsController : ControllerBase
     {
-        private readonly IHotelRepository _repository;
+        private readonly IHotelCRUDService _hotelCRUDService;
         private readonly IMapper _mapper;
         private readonly ILogger<HotelsController> _logger;
 
-        public HotelsController(IHotelRepository repository, IMapper mapper, ILogger<HotelsController> logger)
+        public HotelsController(IHotelCRUDService hotelCRUDService, IMapper mapper, ILogger<HotelsController> logger)
         {
-            _repository = repository;
+            _hotelCRUDService = hotelCRUDService;
             _mapper = mapper;
             _logger = logger;
         }
@@ -33,8 +32,13 @@ namespace Lemax_Take_Home.Controllers
         {
             try
             {
-                var hotel = await _repository.GetByIdAsync(id);
-                return new OkObjectResult(_mapper.Map<HotelDto>(hotel));
+                _logger.LogInformation($"Find hotel with id {id}");
+
+                var hotelDto = await _hotelCRUDService.GetByIdAsync(id);
+
+                _logger.LogInformation($"Found hotel: {JsonConvert.SerializeObject(hotelDto)}.");
+
+                return new OkObjectResult(hotelDto);
             }
             catch (NotFoundException)
             {
@@ -58,28 +62,23 @@ namespace Lemax_Take_Home.Controllers
         {
             _logger.LogInformation($"Creating new hotel: {JsonConvert.SerializeObject(createHotelDto)}.");
 
-            var hotelToCreate = _mapper.Map<Hotel>(createHotelDto);
-
             try
             {
-                await _repository.InsertAsync(hotelToCreate);
+                var createdHotelDto = await _hotelCRUDService.CreateHotelAsync(createHotelDto);
+
+                _logger.LogInformation($"Created hotel: {JsonConvert.SerializeObject(createHotelDto)}.");
+
+                return CreatedAtAction(nameof(GetHotel), new { id = createdHotelDto.Id }, createdHotelDto);
+            }
+            catch (ConflictException e)
+            {
+                _logger.LogError(e, e.Message);
+                return new StatusCodeResult(StatusCodes.Status409Conflict);
             }
             catch (Exception e)
             {
                 _logger.LogError(e, e.Message);
                 return new StatusCodeResult(StatusCodes.Status500InternalServerError);
-            }
-
-            try
-            {
-                var createdHotel = await _repository.GetByIdAsync(hotelToCreate.Id);
-                var createdHotelDto = _mapper.Map<HotelDto>(createdHotel);
-                return CreatedAtAction(nameof(GetHotel), new { id = hotelToCreate.Id }, createdHotelDto);
-            }
-            catch (NotFoundException) //someone deleted it
-            {
-                _logger.LogWarning("Someone deleted created hotel.");
-                return new StatusCodeResult(StatusCodes.Status409Conflict);
             }
         }
 
@@ -95,24 +94,26 @@ namespace Lemax_Take_Home.Controllers
 
             try
             {
-                await _repository.UpdateAsync(id, editHotelDto.Name, editHotelDto.Price, _mapper.Map<Point>(editHotelDto.Geolocation));
-                _logger.LogInformation($"Hotel is updated.");
+                var updatedHotelDto = await _hotelCRUDService.UpdateHotelAsync(id, editHotelDto);
+
+                _logger.LogInformation($"Updated hotel: {JsonConvert.SerializeObject(updatedHotelDto)}.");
+
+                return new OkObjectResult(updatedHotelDto);
             }
             catch (NotFoundException)
             {
                 _logger.LogWarning($"Hotel with id={id} does not exist.");
-                return NotFound(id); //TODO create hotel
+                return NotFound(id);
             }
-
-            try
+            catch (ConflictException e)
             {
-                var editedHotel = await _repository.GetByIdAsync(id);
-                return new OkObjectResult(_mapper.Map<HotelDto>(editedHotel));
-            }
-            catch (NotFoundException) //someone deleted it
-            {
-                _logger.LogWarning("Someone deleted updated hotel.");
+                _logger.LogError(e, e.Message);
                 return new StatusCodeResult(StatusCodes.Status409Conflict);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, e.Message);
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
             }
         }
 
@@ -127,15 +128,16 @@ namespace Lemax_Take_Home.Controllers
 
             try
             {
-                await _repository.DeleteAsync(id);
+                await _hotelCRUDService.DeleteAsync(id);
+
                 _logger.LogInformation($"Hotel is deleted.");
 
                 return Ok();
             }
-            catch (NotFoundException)
+            catch (Exception e)
             {
-                _logger.LogWarning($"Hotel with id={id} does not exist. Hotel is already deleted.");
-                return new StatusCodeResult(StatusCodes.Status200OK);
+                _logger.LogError(e, e.Message);
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
             }
         }
     }

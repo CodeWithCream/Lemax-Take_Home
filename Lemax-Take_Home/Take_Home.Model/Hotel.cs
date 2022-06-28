@@ -1,10 +1,11 @@
 ﻿using NetTopologySuite.Geometries;
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("Take_Home.DAL.InMemory")]
+[assembly: InternalsVisibleTo("Take_Home.DAL.InMemory"),
+            InternalsVisibleTo("Take_Home.Services"),
+           InternalsVisibleTo("Take_Home.Services.Tests")]
 namespace Take_Home.Model
 {
     public class Hotel : IEquatable<Hotel>
@@ -32,7 +33,6 @@ namespace Take_Home.Model
             Price = price;
             Geolocation = geolocation;
         }
-
         public static void Validate(string name, float price, Point geolocation)
         {
             if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Take_Home.Model
 
         public override bool Equals(object? obj)
         {
-            return Equals(obj);
+            return Equals(obj as Hotel);
         }
 
         public override int GetHashCode()

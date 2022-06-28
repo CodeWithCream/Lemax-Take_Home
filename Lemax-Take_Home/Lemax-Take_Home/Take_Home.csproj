@@ -22,6 +22,9 @@
     <ProjectReference Include="..\Take_Home.DAL.InMemory\Take_Home.DAL.InMemory.csproj" />
     <ProjectReference Include="..\Take_Home.DAL.Interfaces\Take_Home.DAL.Interfaces.csproj" />
     <ProjectReference Include="..\Take_Home.DTL\Take_Home.DTL.csproj" />
+    <ProjectReference Include="..\Take_Home.Exceptions\Take_Home.Exceptions.csproj" />
+    <ProjectReference Include="..\Take_Home.Services.Interfaces\Take_Home.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\Take_Home.Services\Take_Home.Services.csproj" />
   </ItemGroup>
 
 </Project>

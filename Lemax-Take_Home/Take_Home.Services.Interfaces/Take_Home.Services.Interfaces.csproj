@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Take_Home.DAL.Interfaces\Take_Home.DAL.Interfaces.csproj" />
-    <ProjectReference Include="..\Take_Home.Exceptions\Take_Home.Exceptions.csproj" />
+    <ProjectReference Include="..\Take_Home.DTL\Take_Home.DTL.csproj" />
   </ItemGroup>
 
 </Project>

@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Take_Home.Services.Tests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Take_Home.Tests", "Take_Home.Tests\Take_Home.Tests.csproj", "{A76DD232-44A4-41A6-A550-E212DD8A7199}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoSpatiaLib", "GeoSpatiaLIB\GeoSpatiaLib.csproj", "{768B3DD0-50CE-4CEF-8038-2E0F0EFA55ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoSpatialLibTests", "GeoSpatialLibTests\GeoSpatialLibTests.csproj", "{78BCC46D-55C1-4202-B71E-3674DFF38BE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{A76DD232-44A4-41A6-A550-E212DD8A7199}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A76DD232-44A4-41A6-A550-E212DD8A7199}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A76DD232-44A4-41A6-A550-E212DD8A7199}.Release|Any CPU.Build.0 = Release|Any CPU
+		{768B3DD0-50CE-4CEF-8038-2E0F0EFA55ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{768B3DD0-50CE-4CEF-8038-2E0F0EFA55ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{768B3DD0-50CE-4CEF-8038-2E0F0EFA55ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{768B3DD0-50CE-4CEF-8038-2E0F0EFA55ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78BCC46D-55C1-4202-B71E-3674DFF38BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78BCC46D-55C1-4202-B71E-3674DFF38BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78BCC46D-55C1-4202-B71E-3674DFF38BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78BCC46D-55C1-4202-B71E-3674DFF38BE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

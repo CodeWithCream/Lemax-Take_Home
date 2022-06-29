@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Take_Home.DTL
+namespace Take_Home.DTL.Pagination
 {
     public class PagedResultDto<T> where T : IEnumerable
     {

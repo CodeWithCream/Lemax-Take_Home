@@ -1,5 +1,6 @@
 ﻿using Lemax_Take_Home.DTOs;
-using Take_Home.DTL;
+using Take_Home.DTL.Hotel;
+using Take_Home.DTL.Pagination;
 
 namespace Take_Home.Services.Interfaces
 {

@@ -6,6 +6,7 @@ using Moq;
 using NetTopologySuite.Geometries;
 using Newsy_API.DAL.Exceptions;
 using Take_Home.DAL.Interfaces;
+using Take_Home.DTL.Hotel;
 using Take_Home.Model;
 using Take_Home.Services.Interfaces;
 

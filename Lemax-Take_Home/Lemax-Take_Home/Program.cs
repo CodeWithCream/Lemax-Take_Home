@@ -1,7 +1,6 @@
 using Lemax_Take_Home.Authorization;
 using Lemax_Take_Home.Mappings;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.OpenApi.Models;
 using Take_Home.DAL.InMemory;
 using Take_Home.DAL.Interfaces;

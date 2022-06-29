@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Take_Home.DTL
+namespace Take_Home.DTL.Pagination
 {
     public class PaginationFilterDto
     {

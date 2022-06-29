@@ -1,7 +1,8 @@
-﻿using System.ComponentModel;
+﻿using Lemax_Take_Home.DTOs;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Lemax_Take_Home.DTOs
+namespace Take_Home.DTL.Hotel
 {
     public class CreateEditHotelDto
     {

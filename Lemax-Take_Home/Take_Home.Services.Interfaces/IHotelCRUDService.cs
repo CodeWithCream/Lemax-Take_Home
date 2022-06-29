@@ -1,4 +1,4 @@
-﻿using Lemax_Take_Home.DTOs;
+﻿using Take_Home.DTL.Hotel;
 
 namespace Take_Home.Services.Interfaces
 {

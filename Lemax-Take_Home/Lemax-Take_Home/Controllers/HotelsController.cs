@@ -4,7 +4,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newsy_API.DAL.Exceptions;
 using Newtonsoft.Json;
-using Take_Home.DTL;
+using Take_Home.DTL.Hotel;
+using Take_Home.DTL.Pagination;
 using Take_Home.Services.Interfaces;
 
 namespace Lemax_Take_Home.Controllers
@@ -153,10 +154,14 @@ namespace Lemax_Take_Home.Controllers
 
             try
             {
-
                 var hotels = await _hotelSearchService.SearchAsync(currentLocation, paginationFilter);
 
                 return new OkObjectResult(hotels);
+            }
+            catch (ArgumentException e)
+            {
+                _logger.LogError(e, e.Message);
+                return new StatusCodeResult(StatusCodes.Status400BadRequest);
             }
             catch (Exception e)
             {

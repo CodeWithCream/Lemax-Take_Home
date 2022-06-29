@@ -6,7 +6,8 @@ using NetTopologySuite.Geometries;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
 using Take_Home.DAL.Interfaces;
-using Take_Home.DTL;
+using Take_Home.DTL.Hotel;
+using Take_Home.DTL.Pagination;
 using Take_Home.Model;
 using Take_Home.Services.Interfaces;
 
@@ -64,7 +65,7 @@ namespace Take_Home.Services
 
         private async Task<IEnumerable<HotelSearchResultDto>> SearchHotelsAsync(GeolocationDto searchLocation)
         {
-            if (_hotelSearchSCache.Geolocation == searchLocation)
+            if (searchLocation.Equals(_hotelSearchSCache.Geolocation))
             {
                 return _hotelSearchSCache.Hotels;
             }

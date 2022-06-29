@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using Newsy_API.DAL.Exceptions;
+using Take_Home.DTL.Hotel;
 using Take_Home.Services.Interfaces;
 
 namespace Take_Home.Tests.Controllers

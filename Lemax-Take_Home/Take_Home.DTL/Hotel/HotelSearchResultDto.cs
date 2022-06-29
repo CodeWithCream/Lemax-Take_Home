@@ -1,4 +1,4 @@
-﻿namespace Take_Home.DTL
+﻿namespace Take_Home.DTL.Hotel
 {
     public class HotelSearchResultDto
     {

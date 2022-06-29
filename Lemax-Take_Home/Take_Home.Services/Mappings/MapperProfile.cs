@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Lemax_Take_Home.DTOs;
 using NetTopologySuite.Geometries;
-using Take_Home.DTL;
+using Take_Home.DTL.Hotel;
 using Take_Home.Model;
 
 namespace Lemax_Take_Home.Mappings

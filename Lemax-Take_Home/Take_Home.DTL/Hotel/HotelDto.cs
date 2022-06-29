@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Lemax_Take_Home.DTOs;
 
-namespace Lemax_Take_Home.DTOs
+namespace Take_Home.DTL.Hotel
 {
     public class HotelDto : IEquatable<HotelDto>
     {

@@ -19,7 +19,7 @@ namespace GeoSpatialLibTests
 
             Assert.AreEqual(0, distance);
         }
-               
+
         [TestMethod]
         public void Get_Distance_Returns_Distance_Between_Two_Points_On_The_Same_Hemisphere()
         {

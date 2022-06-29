@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using Lemax_Take_Home.DTOs;
 using Microsoft.Extensions.Logging;
 using NetTopologySuite.Geometries;
 using Newsy_API.DAL.Exceptions;
 using Newtonsoft.Json;
 using Take_Home.DAL.Interfaces;
+using Take_Home.DTL.Hotel;
 using Take_Home.Model;
 using Take_Home.Services.Interfaces;
 

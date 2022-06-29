@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Lemax_Take_Home.DTOs;
 using NetTopologySuite.Geometries;
+using Take_Home.DTL;
 using Take_Home.Model;
 
 namespace Lemax_Take_Home.Mappings
@@ -18,6 +19,8 @@ namespace Lemax_Take_Home.Mappings
             CreateMap<Hotel, HotelDto>();
             CreateMap<CreateEditHotelDto, Hotel>()
                 .ForMember(dest => dest.Geolocation, opt => opt.MapFrom(src => src.Geolocation));
+
+            CreateMap<Hotel, HotelSearchResultDto>();
         }
     }
 }

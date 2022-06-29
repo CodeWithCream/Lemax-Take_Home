@@ -28,9 +28,21 @@ namespace Lemax_Take_Home.DTOs
 
         public override int GetHashCode()
         {
-            throw new NotImplementedException();
+            unchecked // Overflow is fine, just wrap
+            {
+                int hash = 17;
+                // Suitable nullity checks etc, of course :)
+                hash = hash * 23 + Longitude.GetHashCode();
+                hash = hash * 23 + Latitude.GetHashCode();
+                return hash;
+            }
         }
 
         #endregion
+
+        public static void Validate(GeolocationDto geolocation)
+        {
+
+        }
     }
 }

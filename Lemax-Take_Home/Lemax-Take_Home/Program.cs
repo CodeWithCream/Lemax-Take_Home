@@ -47,8 +47,9 @@ builder.Services.AddAuthentication("BasicAuthentication")
     .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
 
 //configure repositories
-builder.Services.AddSingleton<IHotelCRUDService, HotelCRUDService>();
 builder.Services.AddSingleton<IHotelRepository, HotelRepository>();
+builder.Services.AddSingleton<IHotelCRUDService, HotelCRUDService>();
+builder.Services.AddSingleton<IHotelSearchService, BruteForceHotelSearchService>();
 
 //configure services
 builder.Services.AddSingleton<IApplicationUserService, SimpleApplicationUserService>();

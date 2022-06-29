@@ -28,6 +28,14 @@ namespace Take_Home.DAL.InMemory
             });
         }
 
+        public async Task<IEnumerable<Hotel>> GetAllAsync()
+        {
+            return await Task.Run(() =>
+            {
+                return _hotels.Values;
+            });
+        }
+
         public async Task InsertAsync(Hotel hotel)
         {
             await Task.Run(() =>

@@ -1,11 +1,11 @@
 ﻿using NetTopologySuite.Geometries;
 
-namespace Take_Home.Services.Interfaces
+namespace GeoSpatialLib
 {
     /// <summary>
     /// Operations with geo data
     /// </summary>
-    public class GeoDistance
+    public static class GeoDistance
     {
         private const double MinutesInDegree = 60;
         /// <summary>
@@ -16,7 +16,7 @@ namespace Take_Home.Services.Interfaces
         /// <returns>Calculated distance in kilometers</returns>
         public static double Calculate(Point point1, Point point2)
         {
-            if (point1.Equals(point2))
+            if (point1.CompareTo(point2) == 0)
             {
                 return 0;
             }

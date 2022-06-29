@@ -28,7 +28,8 @@ namespace Take_Home.Tests.Controllers
             _mapper = mapper;
 
             _hotelCRUDServiceMock = new Mock<IHotelCRUDService>();
-            _controller = new HotelsController(_hotelCRUDServiceMock.Object, _mapper, new NullLogger<HotelsController>());
+            var hotelSearchServiceMock = new Mock<IHotelSearchService>();
+            _controller = new HotelsController(_hotelCRUDServiceMock.Object, hotelSearchServiceMock.Object, _mapper, new NullLogger<HotelsController>());
         }
 
         [TestMethod]

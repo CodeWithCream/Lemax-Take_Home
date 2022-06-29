@@ -2,10 +2,9 @@
 using Lemax_Take_Home.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using NetTopologySuite.Geometries;
 using Newsy_API.DAL.Exceptions;
 using Newtonsoft.Json;
-using Take_Home.Model;
+using Take_Home.DTL;
 using Take_Home.Services.Interfaces;
 
 namespace Lemax_Take_Home.Controllers
@@ -15,12 +14,14 @@ namespace Lemax_Take_Home.Controllers
     public class HotelsController : ControllerBase
     {
         private readonly IHotelCRUDService _hotelCRUDService;
+        private readonly IHotelSearchService _hotelSearchService;
         private readonly IMapper _mapper;
         private readonly ILogger<HotelsController> _logger;
 
-        public HotelsController(IHotelCRUDService hotelCRUDService, IMapper mapper, ILogger<HotelsController> logger)
+        public HotelsController(IHotelCRUDService hotelCRUDService, IHotelSearchService hotelSearchService, IMapper mapper, ILogger<HotelsController> logger)
         {
             _hotelCRUDService = hotelCRUDService;
+            _hotelSearchService = hotelSearchService;
             _mapper = mapper;
             _logger = logger;
         }
@@ -133,6 +134,29 @@ namespace Lemax_Take_Home.Controllers
                 _logger.LogInformation($"Hotel is deleted.");
 
                 return Ok();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, e.Message);
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("search")]
+        [ProducesResponseType(typeof(IEnumerable<HotelDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<PagedResultDto<IEnumerable<HotelDto>>>> GetHotels(
+            [FromQuery] GeolocationDto currentLocation,
+            [FromQuery] PaginationFilterDto paginationFilter)
+        {
+            _logger.LogInformation($"Search hotels near {currentLocation.Longitude},{currentLocation.Latitude}. (Page {paginationFilter.PageNumber})");
+
+            try
+            {
+
+                var hotels = await _hotelSearchService.SearchAsync(currentLocation, paginationFilter);
+
+                return new OkObjectResult(hotels);
             }
             catch (Exception e)
             {

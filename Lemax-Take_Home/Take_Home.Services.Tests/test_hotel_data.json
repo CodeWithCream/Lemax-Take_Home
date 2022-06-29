@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 1,
+    "name": "et tempor",
+    "price": 177.32,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        16,
+        45.8
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "name": "Lorem nisi",
+    "price": 166.7,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.79
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "name": "aliquip Lorem",
+    "price": 438.22,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "name": "labore amet",
+    "price": 79.22,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.83
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "name": "velit consequat",
+    "price": 489.94,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.85
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "name": "laboris fugiat",
+    "price": 143.24,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.85
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "name": "ut esse",
+    "price": 465.5,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.78
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "name": "officia aliquip",
+    "price": 475.75,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "name": "tempor tempor",
+    "price": 192.42,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        16,
+        45.76
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "name": "consectetur aliquip",
+    "price": 217.83,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.82
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "name": "adipisicing deserunt",
+    "price": 397.34,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.84
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "name": "Lorem excepteur",
+    "price": 486.81,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "name": "est esse",
+    "price": 209.27,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.79
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "name": "deserunt magna",
+    "price": 401.56,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.8
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "name": "amet et",
+    "price": 336.54,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.8
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "name": "et voluptate",
+    "price": 242.73,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "name": "magna aliquip",
+    "price": 141.36,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.81
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "name": "veniam excepteur",
+    "price": 477.24,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.84
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "name": "velit ullamco",
+    "price": 137.35,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.75
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "name": "adipisicing nulla",
+    "price": 323.34,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.83
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "name": "amet ipsum",
+    "price": 296.67,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.8
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "name": "ut nisi",
+    "price": 232.08,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.81
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "name": "nostrud adipisicing",
+    "price": 323.46,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.85
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "name": "nostrud in",
+    "price": 447.24,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.85
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "name": "anim tempor",
+    "price": 232.36,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.75
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "name": "commodo veniam",
+    "price": 224.26,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.76
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "name": "et tempor",
+    "price": 75.87,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.75
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "name": "commodo aliquip",
+    "price": 242.69,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.82
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "name": "dolore excepteur",
+    "price": 451.97,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.81
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "name": "ullamco aute",
+    "price": 433.46,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.83
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "name": "veniam exercitation",
+    "price": 65.03,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 32,
+    "name": "elit ex",
+    "price": 98.13,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.85
+      ]
+    }
+  },
+  {
+    "id": 33,
+    "name": "reprehenderit irure",
+    "price": 388.68,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        16,
+        45.84
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "name": "voluptate laborum",
+    "price": 172.76,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        16,
+        45.78
+      ]
+    }
+  },
+  {
+    "id": 35,
+    "name": "nulla consectetur",
+    "price": 104.27,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        16,
+        45.85
+      ]
+    }
+  },
+  {
+    "id": 36,
+    "name": "Lorem reprehenderit",
+    "price": 315.29,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.78
+      ]
+    }
+  },
+  {
+    "id": 37,
+    "name": "dolor ut",
+    "price": 276.61,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.8
+      ]
+    }
+  },
+  {
+    "id": 38,
+    "name": "Lorem nulla",
+    "price": 39.73,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 39,
+    "name": "ex reprehenderit",
+    "price": 19.86,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.8
+      ]
+    }
+  },
+  {
+    "id": 40,
+    "name": "nostrud nulla",
+    "price": 54,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 41,
+    "name": "elit ullamco",
+    "price": 411.37,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.81
+      ]
+    }
+  },
+  {
+    "id": 42,
+    "name": "tempor aute",
+    "price": 80.4,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.79
+      ]
+    }
+  },
+  {
+    "id": 43,
+    "name": "aute cupidatat",
+    "price": 101.54,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.78
+      ]
+    }
+  },
+  {
+    "id": 44,
+    "name": "sit ex",
+    "price": 27.8,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.83
+      ]
+    }
+  },
+  {
+    "id": 45,
+    "name": "adipisicing sint",
+    "price": 332.81,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        16,
+        45.82
+      ]
+    }
+  },
+  {
+    "id": 46,
+    "name": "do qui",
+    "price": 285.77,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.82
+      ]
+    }
+  },
+  {
+    "id": 47,
+    "name": "eiusmod aliqua",
+    "price": 13.17,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.82
+      ]
+    }
+  },
+  {
+    "id": 48,
+    "name": "et et",
+    "price": 26.55,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        16,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 49,
+    "name": "commodo duis",
+    "price": 87.44,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.79
+      ]
+    }
+  },
+  {
+    "id": 50,
+    "name": "mollit eu",
+    "price": 392.03,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.81
+      ]
+    }
+  },
+  {
+    "id": 51,
+    "name": "excepteur ad",
+    "price": 320.06,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 52,
+    "name": "pariatur sunt",
+    "price": 335.06,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.82
+      ]
+    }
+  },
+  {
+    "id": 53,
+    "name": "eu laborum",
+    "price": 173.92,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.84
+      ]
+    }
+  },
+  {
+    "id": 54,
+    "name": "reprehenderit ex",
+    "price": 226.7,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.79
+      ]
+    }
+  },
+  {
+    "id": 55,
+    "name": "nulla ullamco",
+    "price": 149.3,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.76
+      ]
+    }
+  },
+  {
+    "id": 56,
+    "name": "nisi voluptate",
+    "price": 497.07,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.79
+      ]
+    }
+  },
+  {
+    "id": 57,
+    "name": "sunt incididunt",
+    "price": 346.63,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.76
+      ]
+    }
+  },
+  {
+    "id": 58,
+    "name": "et irure",
+    "price": 58.71,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.8
+      ]
+    }
+  },
+  {
+    "id": 59,
+    "name": "reprehenderit pariatur",
+    "price": 438.29,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.85
+      ]
+    }
+  },
+  {
+    "id": 60,
+    "name": "minim cillum",
+    "price": 21.29,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.75
+      ]
+    }
+  },
+  {
+    "id": 61,
+    "name": "occaecat eiusmod",
+    "price": 478.79,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 62,
+    "name": "sunt magna",
+    "price": 230.24,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.85
+      ]
+    }
+  },
+  {
+    "id": 63,
+    "name": "eiusmod sint",
+    "price": 190.91,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.83
+      ]
+    }
+  },
+  {
+    "id": 64,
+    "name": "duis Lorem",
+    "price": 52.72,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.85
+      ]
+    }
+  },
+  {
+    "id": 65,
+    "name": "officia occaecat",
+    "price": 89.06,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.81
+      ]
+    }
+  },
+  {
+    "id": 66,
+    "name": "id pariatur",
+    "price": 341.44,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.82
+      ]
+    }
+  },
+  {
+    "id": 67,
+    "name": "reprehenderit eu",
+    "price": 164.63,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.83
+      ]
+    }
+  },
+  {
+    "id": 68,
+    "name": "est qui",
+    "price": 87.36,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 69,
+    "name": "duis exercitation",
+    "price": 33.23,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.85
+      ]
+    }
+  },
+  {
+    "id": 70,
+    "name": "quis ex",
+    "price": 381.21,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.81
+      ]
+    }
+  },
+  {
+    "id": 71,
+    "name": "et dolor",
+    "price": 413.73,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.78
+      ]
+    }
+  },
+  {
+    "id": 72,
+    "name": "quis culpa",
+    "price": 113.64,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.8
+      ]
+    }
+  },
+  {
+    "id": 73,
+    "name": "laborum laboris",
+    "price": 42.81,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.81
+      ]
+    }
+  },
+  {
+    "id": 74,
+    "name": "deserunt duis",
+    "price": 91.45,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.84
+      ]
+    }
+  },
+  {
+    "id": 75,
+    "name": "ullamco quis",
+    "price": 495.83,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.78
+      ]
+    }
+  },
+  {
+    "id": 76,
+    "name": "laborum amet",
+    "price": 295.08,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.85
+      ]
+    }
+  },
+  {
+    "id": 77,
+    "name": "cupidatat ipsum",
+    "price": 41.71,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.84
+      ]
+    }
+  },
+  {
+    "id": 78,
+    "name": "veniam consequat",
+    "price": 482.79,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.85
+      ]
+    }
+  },
+  {
+    "id": 79,
+    "name": "ut culpa",
+    "price": 305.02,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.81
+      ]
+    }
+  },
+  {
+    "id": 80,
+    "name": "deserunt deserunt",
+    "price": 160.18,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.78
+      ]
+    }
+  },
+  {
+    "id": 81,
+    "name": "quis quis",
+    "price": 387.69,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.83
+      ]
+    }
+  },
+  {
+    "id": 82,
+    "name": "irure est",
+    "price": 295.92,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.84
+      ]
+    }
+  },
+  {
+    "id": 83,
+    "name": "mollit excepteur",
+    "price": 372.19,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.84
+      ]
+    }
+  },
+  {
+    "id": 84,
+    "name": "culpa labore",
+    "price": 457.88,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.82
+      ]
+    }
+  },
+  {
+    "id": 85,
+    "name": "eiusmod nisi",
+    "price": 237.64,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.81
+      ]
+    }
+  },
+  {
+    "id": 86,
+    "name": "dolor adipisicing",
+    "price": 16,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.84
+      ]
+    }
+  },
+  {
+    "id": 87,
+    "name": "ipsum reprehenderit",
+    "price": 83.2,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.78
+      ]
+    }
+  },
+  {
+    "id": 88,
+    "name": "esse qui",
+    "price": 181.78,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        16,
+        45.81
+      ]
+    }
+  },
+  {
+    "id": 89,
+    "name": "dolor sunt",
+    "price": 38.81,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.99,
+        45.78
+      ]
+    }
+  },
+  {
+    "id": 90,
+    "name": "excepteur Lorem",
+    "price": 253.99,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 91,
+    "name": "et ad",
+    "price": 117.09,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.85
+      ]
+    }
+  },
+  {
+    "id": 92,
+    "name": "voluptate excepteur",
+    "price": 15.26,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.82
+      ]
+    }
+  },
+  {
+    "id": 93,
+    "name": "ipsum culpa",
+    "price": 292.55,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 94,
+    "name": "minim ipsum",
+    "price": 227.28,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.98,
+        45.79
+      ]
+    }
+  },
+  {
+    "id": 95,
+    "name": "excepteur in",
+    "price": 323.89,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        16,
+        45.83
+      ]
+    }
+  },
+  {
+    "id": 96,
+    "name": "commodo nulla",
+    "price": 491.55,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        16,
+        45.75
+      ]
+    }
+  },
+  {
+    "id": 97,
+    "name": "elit occaecat",
+    "price": 460.38,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.96,
+        45.77
+      ]
+    }
+  },
+  {
+    "id": 98,
+    "name": "magna Lorem",
+    "price": 101.57,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.79
+      ]
+    }
+  },
+  {
+    "id": 99,
+    "name": "pariatur elit",
+    "price": 456.69,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.95,
+        45.8
+      ]
+    }
+  },
+  {
+    "id": 100,
+    "name": "eu laborum",
+    "price": 373.34,
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        15.97,
+        45.77
+      ]
+    }
+  }
+]

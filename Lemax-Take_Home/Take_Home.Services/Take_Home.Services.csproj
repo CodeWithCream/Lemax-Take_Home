@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GeoSpatiaLIB\GeoSpatiaLib.csproj" />
     <ProjectReference Include="..\Take_Home.DAL.Interfaces\Take_Home.DAL.Interfaces.csproj" />
     <ProjectReference Include="..\Take_Home.Exceptions\Take_Home.Exceptions.csproj" />
     <ProjectReference Include="..\Take_Home.Services.Interfaces\Take_Home.Services.Interfaces.csproj" />
